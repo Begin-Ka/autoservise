@@ -1,0 +1,195 @@
+/* 1280 1024 */
+@media (max-width:1300px){
+        
+    .present{
+        margin: 10px auto;
+    }
+    .block_present{
+        margin: 30px auto;
+        height: auto;
+    }
+
+}
+
+@media (max-width:1024px){
+    .header,
+    .footer {
+        width: 100%;
+        max-width: 1000px;
+        justify-content: center;
+    }
+    .header-logo,
+    .footer-logo {
+        max-width: 270px;
+    }
+    .header-nav,
+    .footer-nav {
+        max-width: 400px;
+    }
+    .main {
+        width: 100%;
+        max-width: 1000px;
+    }
+    .parallax {
+        width: 100%;
+        max-width: 1000px;              
+    }
+    .page-content {
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+    }
+    .image {
+        width: 100%;
+        height: auto;        
+    }  
+    .image-jobs{
+        width: 100%;
+        height: auto;
+    } 
+    .title-jobs {
+        font-size: 24px;
+    }
+    .text-jobs {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width:768px){    
+    .header,
+    .footer {
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 768px;
+        justify-content: center;
+    } 
+    .header-nav,
+    .footer-nav {
+        max-width: 100px;
+        opacity: 0;
+    }
+    .burger{
+        opacity: 1;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+    .nav-link {
+        font-size: 16px;
+    }
+    .fas,
+    .fab {
+        font-size: 16px;
+    }
+    .main {
+        width: 100%;
+        max-width: 768px;
+    }
+    .parallax {
+        width: 100%;
+        max-width: 768px;
+    }
+    .parallax h2 {
+        font-size: 28px;
+    }
+    .parallax h3 {
+        font-size: 16px;
+    }
+    .page-content {
+        width: 100%;
+        max-width: 768px;
+        height: auto;
+    }    
+    .jobs-inner {        
+        margin: 20px auto;        
+    }
+    .block-contacts1 {
+        margin-bottom: 15px;        
+    }
+    .text-adress {
+        font-size: 18px;
+    }  
+    
+}
+
+@media (max-width:480px) {
+    .header,
+    .footer {
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+    } 
+    .header-nav,
+    .footer-nav {
+        max-width:80px;        
+    } 
+    .header-logo{
+        max-width: 150px;
+    }  
+    
+    .logo {
+        font-size: 18px;
+    }
+    .fas,
+    .fab {
+        opacity: 0;
+    }
+    .main {
+        width: 100%;
+        max-width: 480px;
+    }
+    .parallax {
+        width: 100%;
+        max-width: 480px;
+        height: auto;
+    }
+    .parallax-cotent{
+        padding: 30px;
+    }
+    .title_paralax{
+        font-size: 32px;
+    }
+    .subtitle_paralax{
+        opacity: 0;
+        max-width: 100px;
+    }
+    .parallax h2 {
+        font-size: 20px;
+    }
+    .parallax h3 {
+        font-size: 13px;
+    }
+    .jobs-inner{
+        max-width: 300px;
+        height: auto;
+    }
+    .image-jobs{
+        max-width: 300px;
+    }
+    .title-jobs {
+        font-size: 20px;
+    } 
+    .text-jobs {
+        font-size: 14px;
+    }
+    .main-contacts{
+        max-width: 480px;
+    }
+    .footer{
+        max-width: 480px;
+        justify-content: start;
+    }
+    .footer-logo{
+        max-width: 145px;
+    }
+    .footer-nav{
+        max-width: 60px;
+    }
+    .nav-link{
+        max-width: 0.5px;
+    }
+   
+
+}

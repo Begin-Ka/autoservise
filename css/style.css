@@ -1,0 +1,784 @@
+@import url(`https://fonts.googleapis.com/css?family=Poppins&display=swap`);
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+p{
+    margin: 0 0 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+/*header*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    height: 100px;
+    margin: auto;
+    background-color: rgb(61, 61, 61);       
+}
+.header-logo {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    max-width: 250px;
+    height: auto;    
+    align-items: center;
+    margin: auto;    
+}
+.header-nav {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    align-items: center;
+    margin: auto;     
+}
+.fas,
+.fab {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    margin: 35px auto;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all .3s linear;
+}
+.fas:hover{
+    color: yellow;
+}
+.fab:hover{   
+    color: yellow;      
+}
+.logo {
+    display: flex;   
+    font-size: 32px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: white;
+    text-transform: uppercase;
+    margin: auto;
+}
+.nav-link {
+    font-size: 20px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: auto;    
+    transition: all .3s linear;
+}
+.nav-link:hover {
+    color: yellow;     
+}
+
+/* burger */
+.burger{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 2%;
+    height: 50px;
+    width: 50px;       
+    background-color: rgb(61, 61, 61); 
+    opacity: 0;    
+}
+.burger-btn{    
+    display: block;      
+    width: 50px;
+    height: 50px;   
+    justify-content: center;    
+    position: relative;    
+}
+.burger-btn span {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 2px;
+    background-color:white;
+    transition: all 0.5s;
+}
+.burger-btn span:nth-of-type(2) {
+    top:14px;
+}
+.burger-btn span:nth-of-type(3) {
+    top: 36px;
+}
+/* burger-btn.active*/
+.burger-btn.active span {
+    opacity: 0;
+}
+.burger-btn.active span:nth-of-type(2){
+    opacity: 1;
+    top: 50%;
+    transform: rotate(45deg);
+}
+.burger-btn.active span:nth-of-type(3){
+    opacity: 1;
+    top: 50%;
+    transform: rotate(-45deg);
+}
+/* burger-menu*/
+.burger-menu {
+    display: flex;
+    position: fixed;    
+    flex-direction: column;    
+    justify-content:start;
+    width: 200px;    
+    height: 130px;
+    padding: 5px;
+    background-color: grey;    
+    top: 85px;
+    right: 0;
+    z-index: 4;
+    opacity: 0.8;
+    transform: translateX(100%);
+    transition: all ease 1s;
+}
+.burger-menu.active {
+    transform: translateX(0);
+    transition: all ease 1s;
+}
+.burger-link {
+    display: block;
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 270px;
+    height: 26px;
+    color:white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 40px;
+}
+.burger-link:hover{
+    color: yellow;    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.burger-menu .fas {
+    margin-left: 15px;
+}
+.burger-menu .fab {
+    margin-left: 15px;
+}
+
+/*end burger------------------*/
+
+/*main*/
+.main {
+    display: flex;    
+    flex-direction: column;
+    flex-wrap: wrap;    
+    justify-content: center;    
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: auto;
+}
+
+/*PARALLAX*/
+.parallax {
+    background-image: url(../images/parallax/paralax_1.jpg);
+    background-attachment: fixed;
+    width: 100%;
+    max-width: 1600px;
+    height: 800px;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+}
+.parallax-cotent { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: auto;   
+    z-index: 3;
+}
+.title_paralax {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    height: auto;   
+    color: white;
+    font-size: 58px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    margin: auto;
+    margin-bottom: 120px; 
+    text-transform: uppercase;
+}
+.subtitle_paralax {
+    display: flex; 
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    height: auto;   
+    color: white;
+    font-size: 26px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    margin: auto;
+    margin-bottom: 60px; 
+    text-transform: uppercase;
+}
+.btn { 
+    display: flex; 
+    justify-content: center;
+    width: 100%;
+    max-width: 220px;
+    height: 50px;      
+    padding: 15px 8px;    
+    background-color: yellow;
+    color: black;    
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .3s linear;    
+    margin: auto;
+}
+.btn:hover {
+    background-color: white;
+    color: chocolate;
+    font-weight: 800;
+}
+.parallax .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: 2;
+}
+.page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height:350px;
+    margin: 0 auto;
+}
+/*probel*/
+.probel {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100px;    
+    height: 100px;    
+    margin: auto;  
+}
+.probel-title {
+    display: flex;    
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(61, 61, 61);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: auto;
+}
+.probel-title:after{
+    display: flex;
+    content: " ";    
+    width: 70px;
+    height: 3px;
+    background-color: rgb(61, 61, 61);
+    margin: auto;   
+}
+/*present*/
+.paralax-content_present{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: auto;   
+    z-index: 3;
+}
+.page_content_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+}
+.page_content_header_name{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;       
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: white;
+    margin: auto; 
+}
+.present {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;    
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: 50px auto;
+    padding: 0 40px; 
+}
+.block_present{
+    display: flex;         
+    justify-content: center;
+    position: relative;
+    align-items: center;       
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: 60px auto;
+    transition: all .3s linear;
+    box-shadow: 8px 5px 5px black;
+    background-color: gray;     
+}
+.content-present{
+    display: flex; 
+    position: absolute;   
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;   
+    color: white;
+    margin: auto;
+    z-index: 10;
+    border: 2px white solid;
+    padding: 10px;
+}
+.title-present{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.image {
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin: auto;    
+    transition: all .3s linear;
+    opacity: 0.3;     
+}
+.image:hover {
+    opacity: 0.1;    
+}
+/*jobs*/
+.jobs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;        
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: auto;
+    background-color: rgb(61, 61, 61);      
+}
+.jobs_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;        
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+}
+.jobs_header_name{
+    display: flex;
+    justify-content: center;        
+    width: 100%;    
+    height: auto;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: "Allenoire Free Personal" sans-serif;
+    color: white;
+    margin: auto;    
+}
+.jobs_block{
+    display: flex;
+    flex-direction: center;
+    flex-wrap: wrap;        
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: auto;
+}
+.jobs-inner {
+    display: flex;         
+    justify-content: center;
+    position: relative;
+    align-items: center;       
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: 60px auto;
+    transition: all .3s linear;
+    box-shadow: 8px 5px 5px black;         
+}
+.jobs-inner:hover{
+    box-shadow: 6px 2px 3px black; 
+}
+.image-jobs {
+    display: flex;    
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    margin: auto;
+    transition: all .3s linear; 
+    opacity: 0.5;               
+}
+.image-jobs:hover{
+    opacity: 0.3;
+}
+.content-jobs {
+    display: flex; 
+    position: absolute;   
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;   
+    color: white;
+    margin: auto;
+    z-index: 10;
+    border: 2px white solid;
+    padding: 10px;    
+}
+.title-jobs {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;    
+}
+.text-jobs {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.btn-jobs {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    width: 100%;
+    max-width: 172px;
+    height: 35px;       
+    background-color: yellow;
+    color: black;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;    
+    margin: auto;    
+    transition: all .3s linear;
+}
+.btn-jobs:hover {
+    background-color: white;
+    color: brown;
+    font-weight: 800;
+}
+/*contacts*/
+.main-contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+    margin: auto;
+    background-color: rgb(61, 61, 61);
+}
+.contacts_blocks{
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 75px auto;
+    padding: 0 15px;
+}
+.block-contacts1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+.social {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    justify-content: start;
+    margin: 20px auto;
+}
+.adress {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    justify-content: center;
+    margin: auto;
+}
+.adress_block_name{
+    display: flex;    
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    justify-content: start;
+    margin: auto;    
+    padding-bottom: 20px;    
+    font-size: 24px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    text-transform: uppercase;
+    color: white;    
+}
+.adress_block{
+    display: flex; 
+    flex-direction: column;   
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.text-adress {
+    display: flex;    
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    justify-content: start;
+    margin: auto;
+    font-size: 18px;
+    color: white;
+    font-size: 18px;
+    font-family: "Allenoire Free Personal" sans-serif;
+    line-height: 1.7;
+}
+
+/*form-letter*/
+.main-letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    background-color: rgb(146, 145, 145);
+    margin: auto;    
+}
+.letter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 20px;    
+    margin: auto;
+}
+.letter-name {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    max-width: 320px;
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 300;
+    font-style: italic;
+    color: white;
+    margin: 15px auto;
+}
+.letter input {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    width: 260px;
+    height: 40px;
+    background-color: white;
+    border: grey 2px solid;
+    margin: 5px auto;
+}
+input.massage {
+    display: flex;
+    width: 100%;
+    max-width: 320px;    
+    height: 40px;
+    min-height: 100px;
+    background-color: white;
+    border: grey 2px solid;
+    margin: 5px auto;
+}
+
+input.letter-btn {
+    display: block;    
+    width: 100%;
+    max-width: 320px;
+    height: 30px;
+    padding: 7px 0px;
+    margin-left: 0;
+    background-color: yellow;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border: grey 2px solid;
+    transition: all .3s linear;
+}
+input.letter-btn:hover{
+    background-color:white;
+    color: black;
+    font-weight: 700;
+}
+#form {
+    width: 280px;
+    height: auto;
+}
+
+/*footer*/
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1600px;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    border-top: 5px solid white;
+    background-color: rgb(61, 61, 61);
+}
+.footer-logo {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    max-width: 300px;
+    height: 80px;    
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px;
+}
+/*arrowUp*/
+.link_to_top{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    max-width: 50px;
+    height: 50px;    
+    align-items: center;
+    margin: auto;      
+}
+.arrowUp {
+    display: flex;  
+    justify-content: end;  
+    position: fixed;    
+    font-size: 50px;       
+    bottom: 3%;
+    right: 3%;     
+    color: yellow;        
+    z-index: 3;  
+    transition: all .3s linear;  
+}
+.arrowUp:hover{
+    color: white;
+    transition: all .3s linear;
+}
+i.far.fa-arrow-alt-circle-up::before {
+    display: flex;    
+    justify-content: center;
+    right: 4%;
+    margin: auto;        
+}
